@@ -1,0 +1,177 @@
+{% extends 'content/base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+{% block page_title %}
+DD GAME
+{% endblock %}
+
+{% block title %}
+MAKE YOUR GAME
+{% endblock %}
+
+{% block menu %}
+<div class="menu">
+            <a href="{% url 'chapter' 4 %}" class="animated-link">
+                <div>
+
+                    <img src="{% static 'content/arts/code.png' %}" alt="как написать код">
+                    <p>код</p>
+
+                </div>
+            </a>
+            <a href="{% url 'chapter' 13 %}" class="animated-link">
+                <div>
+
+                    <img src="{% static 'content/arts/pixel_monster.png' %}" alt="как нарисовать персонажей">
+                    <p>арты</p>
+
+                </div>
+            </a>
+            <a href="{% url 'chapter' 18 %}" class="animated-link">
+                <div>
+
+                    <img src="{% static 'content/arts/music_key.png' %}" alt="как создать саундтрек">
+                    <p>музыка</p>
+
+                </div>
+            </a>
+            <a href="https://vvrisk.itch.io/alexey" class="animated-link" target="_blank">
+                <div>
+
+                    <img src="{% static 'content/arts/play.png' %}" alt="готовая игра">
+                    <p>готовая игра</p>
+
+                </div>
+            </a>
+        </div>
+{% endblock %}
+
+{% block content %}
+    <div class="description">
+        <div>
+            <p class="with-line">
+                Курс по созданию игры на pygame. Благодаря нему вы узнаете
+                как работают игры изнутри, как использовать известные вам алгоритмы
+                в прикладных задачах, а также полезные no-code скиллы, такие как
+                создание музыки и рисование pixel-art.
+            </p>
+        </div>
+
+        <div>
+            <p class="with-margin">
+                Вам подойдет курс, если вы:
+            </p>
+            <ul>
+                <li>Умеете программировать на python</li>
+                <li>Знаете основы ООП</li>
+                <li>Хотите научиться чему-то новому</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="about-header">
+        <div>
+            <h3>Немного о курсе</h3>
+        </div>
+        <img src="{% static 'content/arts/gramophone.png' %}" alt="gramophone icon">
+    </div>
+    <div class="about-content">
+        <div class="flex">
+            <img src="{% static 'content/arts/game_bird_screen.png' %}" alt="демо игры">
+        </div>
+        <div class="flex">
+            <div class="diolog">
+                <p class="left">Информация о курсе я хз что писать</p>
+                <p class="right">Информация о курсе я хз что писать</p>
+                <p class="left">Информация о курсе я хз что писать</p>
+            </div>
+        </div>
+        <div class="text flex">
+            Проблема заключается в том, что некоторые элементы внутри вашей сетки имеют фиксированные размеры, что
+            мешает им правильно выравниваться по центру. Также стоит обратить внимание на то, что часть элементов не
+            имеет заданного поведения для вертикального выравнивания.
+        </div>
+        <div class="statistic flex">
+            <div class="block">
+                <h1 class="digit">14</h1>
+                <p>чего-то там</p>
+            </div>
+            <div class="block">
+                <h1 class="digit">145</h1>
+                <p>чего-то там</p>
+            </div>
+            <div class="block">
+                <h1 class="digit">31</h1>
+                <p>чего-то там</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="about-header">
+        <div>
+            <h3>Oтзывы учеников</h3>
+        </div>
+        <img src="{% static 'content/arts/goal.png' %}" alt="gramophone icon">
+    </div>
+
+    <div class="feedback">
+        <div class="block">
+            <p class="title">Заголовок отзыва</p>
+            <p>
+                Lorem ipsum odor amet, consectetuer adipiscing elit. Fusce nibh leo dictum consectetur vitae; euismod
+                hendrerit. Eleifend quisque hac luctus justo justo primis. Ad blandit sodales cras eros fermentum leo
+                mollis erat. Accumsan nec pulvinar interdum dis; tortor consequat tortor consequat.
+            </p>
+        </div>
+        <div class="block">
+            <p class="title">Заголовок отзыва</p>
+            <p>
+                Phasellus elit praesent orci massa pharetra velit. Sodales porttitor ullamcorper et nascetur molestie
+                penatibus himenaeos ultricies praesent. Habitasse a sapien nulla cursus aliquet lacus non pulvinar
+                vehicula. Maecenas feugiat neque sed lacus ridiculus finibus sagittis fames.
+            </p>
+        </div>
+
+        <div class="block">
+            <p class="title">Заголовок отзыва</p>
+            <p>
+                orquent quam dignissim enim pellentesque porttitor vulputate duis. Tempor ex facilisis imperdiet eget ad
+                rhoncus potenti. Rutrum venenatis nisi dictum hendrerit litora eros feugiat urna. Lectus imperdiet
+                pharetra urna, rhoncus habitant placerat lorem ultrices habitant. Adipiscing ut dui netus suscipit
+                habitasse dolor.
+            </p>
+        </div>
+        <div class="block">
+            <p class="title">Заголовок отзыва</p>
+            <p>
+                Tristique a molestie taciti; primis morbi penatibus fermentum rutrum. Ad vel nisl, finibus et ultrices
+                aptent hendrerit finibus. Quam blandit scelerisque rutrum cras class malesuada congue sed. Nisl euismod
+                senectus praesent fusce lectus at lacinia. Fringilla in sit scelerisque pulvinar phasellus mus. Lacinia
+                velit magna habitasse nullam venenatis etiam felis magna?
+
+                Phasellus in potenti
+            </p>
+        </div>
+        <div class="block">
+            <p class="title">Заголовок отзыва</p>
+            <p>
+                Justo magna donec orci. Fusce suspendisse ante lacinia fermentum viverra augue sollicitudin porta.
+                Maximus tortor purus id sed amet volutpat. Molestie libero vehicula vulputate mattis consequat curabitur
+                conubia vestibulum. Proin aenean diam dictum varius vivamus. Natoque integer vestibulum tempus ligula
+                pharetra dolor bibendum augue. Maecenas luctus tempor, penatibus orci elit auctor ex. Libero felis
+                hendrerit parturient rhoncus facilisi ipsum. Parturient ullamcorper vulputate ac; ligula condimentum
+                convallis.
+            </p>
+        </div>
+        <div class="img-block">
+            <img src="{% static 'content/arts/game_final_screen.png' %}" alt="картинка игры">
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends 'content/base.html' %}
+{% load static %}
+{% load content_tags %}
+<!DOCTYPE html>
+<html lang="ru">
+
+{% block page_title %}
+DD GAME
+{% endblock %}
+
+{% block title %}
+{{ part }}
+{% endblock %}
+
+{% block menu %}
+<div class="menu">
+            {% if chapter.pk == 13 or chapter.pk == 12 %}
+            <a href="{% url 'chapter' 4 %}" class="animated-link">
+                <div>
+                    <img src="{% static 'content/arts/code.png' %}" alt="как написать код">
+                    <p>как написать код</p>
+                </div>
+            </a>
+            {% else %}
+            <a href="{% url 'home' %}" class="animated-link">
+                <div>
+                    <img src="{% static 'content/arts/code.png' %}" alt="главная">
+                    <p>главная</p>
+                </div>
+            </a>
+            {% endif %}
+
+            {% if chapter.pk != 13 %}
+            <a href="{% url 'chapter' 13 %}" class="animated-link">
+                <div>
+
+                    <img src="{% static 'content/arts/pixel_monster.png' %}" alt="как нарисовать персонажей">
+                    <p>арты</p>
+
+                </div>
+            </a>
+            {% else %}
+            <a href="{% url 'home' %}" class="animated-link">
+                <div>
+                    <img src="{% static 'content/arts/pixel_monster.png' %}" alt="главная">
+                    <p>главная</p>
+                </div>
+            </a>
+            {% endif %}
+
+            {% if chapter.pk != 18 %}
+            <a href="{% url 'chapter' 18 %}" class="animated-link">
+                <div>
+
+                    <img src="{% static 'content/arts/music_key.png' %}" alt="как создать саундтрек">
+                    <p>музыка</p>
+
+                </div>
+            </a>
+            {% else %}
+            <a href="{% url 'home' %}" class="animated-link">
+                <div>
+                    <img src="{% static 'content/arts/music_key.png' %}" alt="главная">
+                    <p>главная</p>
+                </div>
+            </a>
+            {% endif %}
+            <a href="https://vvrisk.itch.io/alexey" class="animated-link" target="_blank">
+                <div>
+
+                    <img src="{% static 'content/arts/play.png' %}" alt="готовая игра">
+                    <p>готовая игра</p>
+
+                </div>
+            </a>
+        </div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="about-header margin">
+        <div>
+            <h3>{{ chapter }}</h3>
+        </div>
+        <img src="{% static 'content/arts/gramophone.png' %}" alt="gramophone icon">
+    </div>
+    <div class="course">
+
+        {% for content in contents %}
+
+            {% if content.type_id_id == 2 %}
+
+        <h1>
+            {{ content.text }}
+        </h1>
+
+            {% elif content.type_id_id == 3 %}
+        <pre class="line-numbers"><code class="language-python">{{ content.text }}</code></pre>
+            {% elif content.type_id_id == 4 %}
+            <img src="{% static content.text %}" alt="главная">
+
+            {% else %}
+
+        <p>
+            {{ content.text }}
+        </p>
+
+            {% endif %}
+
+
+        {% endfor %}
+
+        <div class="flex">
+            <div class="pagination">
+
+                {% for c in all_chapters %}
+                    <a href="{% url 'chapter' c.pk %}"
+                       {% if c.pk == chapter.pk %} class="active"{% endif %}>
+                        {{ forloop.counter }}
+                    </a>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </div>>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js"></script>
+{% endblock %}

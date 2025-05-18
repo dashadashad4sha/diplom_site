@@ -1,0 +1,68 @@
+{% load static %}
+{% load content_tags %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block page_title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'content/code_style.css' %}">
+    <link rel="stylesheet" href="{% static 'content/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-dark.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>{% block title %} {% endblock %}</h1>
+        {% block menu %} {% endblock %}
+
+    </div>
+
+    {% block content %} {% endblock %}
+
+    <div class="footer">
+        <h1>ДИĦЛOМНЫЙ ĦРOЕКТ</h1>
+        <p>Матвеева Дарья Дмитриевна</p>
+        <p>руководитель: Ляхтина Ксения Сергеевна</p>
+
+    <div class="menu">
+        <a href="https://github.com/dashadashad4sha/alex_game" target="_blank" class="animated-link">
+            <div>
+                <img src="{% static 'content/arts/code.png' %}" alt="гитхаб">
+                <p>GitHub</p>
+            </div>
+        </a>
+        <a href="#" class="animated-link">
+            <div>
+
+                <img src="{% static 'content/arts/pixel_monster.png' %}" alt="текст диплома">
+                <p>Текст диплома</p>
+
+            </div>
+        </a>
+        <a href="https://vvrisk.itch.io/alexey" class="animated-link" target="_blank">
+            <div>
+
+                <img src="{% static 'content/arts/play.png' %}" alt="готовая игра">
+                <p>Готовая игра</p>
+
+            </div>
+        </a>
+    </div>
+</div>
+
+</body>
+
+</html>

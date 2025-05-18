@@ -1,0 +1,92 @@
+:root {
+    
+    --black: #1a1a1a;   
+    --gray: #515151; 
+    --light-gray: #d0d0ba;
+    --yellow: #e8e8c6;
+    --light-black: #252525;
+    --middle-gray: #474744;
+}
+
+.margin {
+    margin-top: 200px;
+}
+
+
+
+pre[class*=language-] {
+    padding: 1em 30px !important;
+    background-color: var(--middle-gray);
+    border: .3em solid var(--yellow) !important; 
+    border-radius: 0 !important;
+    box-shadow: 3px 3px 1em var(--light-black) inset !important;
+    margin: 35px 0;
+    width: 50%;
+}
+
+:not(pre)>code[class*=language-] {
+    padding: 1em 30px !important;
+    border-radius: 0 !important;
+    border: .3em solid var(--yellow) !important; 
+    box-shadow: 3px 3px 1em var(--light-black) inset !important;
+}
+
+.course {
+    border-top: var(--light-gray) 1px solid;
+    border-bottom: var(--light-gray) 1px solid;
+    color: var(--yellow);
+    padding: 20px 3em;
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 100px;
+}
+
+.course h1 {
+    text-transform: lowercase;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.course p {
+    margin: 10px 0;
+}
+
+.course img{
+    border: .3em solid var(--yellow) !important; 
+    box-shadow: 3px 3px 1em var(--light-black) inset;
+    margin: 20px 0px;
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+.pagination {
+    display: inline-block;
+    text-align: center;
+    background-color: var(--yellow);
+    border-radius: 30px;
+    height: 50px;
+    margin-bottom: 70px;
+}
+
+.pagination a {
+    color: var(--black);
+    float:left;
+    transition: all .3s;
+    height: 50px;
+    width: 50px;
+    box-sizing: border-box;
+    padding: 12px 10px 8px;
+    font-family: "Pixelify Sans", serif;
+    font-size: 120%;
+    border-radius: 30px;
+}
+
+.pagination a.active {
+    background-color: var(--black);
+    color: var(--yellow);
+    border-radius: 30px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: var(--gray);
+}
